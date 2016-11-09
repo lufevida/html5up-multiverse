@@ -1,31 +1,26 @@
 <!DOCTYPE HTML>
-<!--
-	Multiverse by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!-- Multiverse by HTML5 UP html5up.net | @ajlkn Free for personal and commercial use under the CCA 3.0 license (html5up.net/license) -->
 <html>
 	{% include head.html %}
 	<body>
-
 		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					{% include header.html %}
-
-				<!-- Main -->
-					<div id="main">
-						
-					</div>
-
-				<!-- Footer -->
-					{% include footer.html %}
-
+		<div id="wrapper">
+			<!-- Header -->
+			{% include header.html %}
+			<!-- Main -->
+			<div id="main">
+				{% for post in site.posts %}
+					<article class="thumb">
+						<a href="{{ post.imageFull }}" class="image"><img src="{{ post.imageThumb }}" alt="" /></a>
+						<h2>{{ post.title }}</h2>
+						<p>{{ post.tagline }}</p>
+				</article>
+				{% endfor %}
 			</div>
-
+			<!-- Footer -->
+			{% include footer.html %}
+		</div>
 		<!-- Scripts -->
-			{% include scripts.html %}
-
+		{% include scripts.html %}
 	</body>
 </html>
