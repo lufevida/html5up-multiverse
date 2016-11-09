@@ -8,12 +8,24 @@
 			<section>
 				<h2>Follow me on ...</h2>
 				<ul class="icons">
-					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
-					<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-					<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					{% if site.twitter %}
+						<li><a href="https://twitter.com/{{ site.twitter }}" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					{% endif %}
+					{% if site.facebook %}
+						<li><a href="https://www.facebook.com/{{ site.facebook }}" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					{% endif %}
+					{% if site.instagram %}
+						<li><a href="https://www.instagram.com/{{ site.instagram }}" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					{% endif %}
+					{% if site.github %}
+						<li><a href="https://github.com/{{ site.github }}" class="icon fa-github"><span class="label">GitHub</span></a></li>
+					{% endif %}
+					 {% if site.dribbble %}
+						<li><a href="https://dribbble.com/{{ site.dribbble }}" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+					{% endif %}
+					{% if site.500px %}
+						<li><a href="https://www.linkedin.com/in/{{ site.linkedin }}" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					{% endif %}
 				</ul>
 			</section>
 			<p class="copyright">&copy; {{ site.copyright }}. Design: <a href="http://html5up.net">HTML5 UP</a>.</p>
